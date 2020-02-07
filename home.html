@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- "Header" jumbotron -->
+    <div class="jumbotron" style="margin: 30px">
+        <img class="pic">
+
+        <h1 class="display-4">Hot Restaurant</h1>
+        <hr class="my-4">
+        <p>Current Reservations and Waiting List</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">View Tables</a> <a href="#"
+            class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Home</a>
+    </div>
+
+    <!-- Form for guest info -->
+    <form style="margin: 30px;">
+        <div class="form-group"><label for="nameInput">Name</label><input type="text" class="form-control"
+                placeholder="Seymore Buutz"></div>
+
+        <div class="form-group">
+            <label for="formControlInput">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">How many guests will you have?</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option id="oneGuest">1</option>
+                <option id="twoGuests">2</option>
+                <option id="threeGuests">3</option>
+                <option id="fourGuests">4</option>
+                <option id="fiveGuests">5</option>
+                <option id="sixGuests">6</option>
+                <option id="sevenGuests">7</option>
+                <option id="lotsaGuests">8+</option>
+            </select>
+        </div>
+
+        <a class="btn btn-primary btn-md" href="#" role="button">Submit Reservation</a>
+    </form>
+</body>
+
+</html>

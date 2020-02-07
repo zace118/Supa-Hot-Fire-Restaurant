@@ -10,9 +10,16 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <title>Document</title>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!-- Jquery -->
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
 </head>
 
@@ -30,22 +37,12 @@
 
     <!-- Form for guest info -->
     <form style="margin: 30px;">
-<<<<<<< HEAD
-        <!-- Name input -->
-        <div class="form-group"><label for="nameInput">Name</label><input id="name" type="text" class="form-control"
-=======
-        <div class="form-group"><label for="nameInput">Name</label><input type="text"  id="name" class="form-control"
->>>>>>> dd7f357567baedc2fbf0eb721048472ff8843493
+        <div class="form-group"><label for="nameInput">Name</label><input type="text" id="name" class="form-control"
                 placeholder="Seymore Buutz"></div>
         <!-- Email input -->
         <div class="form-group">
             <label for="formControlInput">Email address</label>
-<<<<<<< HEAD
-            <input type="email" id="email" class="form-control" id="exampleFormControlInput1"
-                placeholder="name@example.com">
-=======
             <input type="email" class="form-control email" id="exampleFormControlInput1" placeholder="name@example.com">
->>>>>>> dd7f357567baedc2fbf0eb721048472ff8843493
         </div>
         <!-- Phone input -->
         <div class="form-group"><label for="numberInput">Phone Number</label><input class="form-control" id="telNo"
@@ -53,11 +50,7 @@
         <!-- Guest input -->
         <div class="form-group">
             <label for="exampleFormControlSelect1">How many guests will you have?</label>
-<<<<<<< HEAD
-            <select class="form-control" id="guestCount">
-=======
             <select class="form-control guests" id="exampleFormControlSelect1">
->>>>>>> dd7f357567baedc2fbf0eb721048472ff8843493
                 <option id="oneGuest">1</option>
                 <option id="twoGuests">2</option>
                 <option id="threeGuests">3</option>
@@ -69,36 +62,34 @@
             </select>
         </div>
 
-<<<<<<< HEAD
-        <a class="btn btn-primary btn-md" id="submit-btn" href="#" role="button">Submit Reservation</a>
-    </form>
-
-=======
-        <a class="btn btn-primary btn-md" id = "add-btn" href="#" role="button">Submit Reservation</a>
+        <a class="btn btn-primary btn-md" id="add-btn" href="#" role="button">Submit Reservation</a>
     </form>
     <script>
-        $("#add-btn").on("click", function(event) {
-          event.preventDefault();
-         let newReservation = {
-            name: $("#name").val().trim(),
-            email: $(".email").val().trim(),
-            guests: $( ".guests").val().trim(),
-           //table: $(".table").val().trim()
-          };
-    console.log(newReservation)
-          // Question: What does this code do??
-          $.post("/restaurant", newReservation)
-            .then(function(data) {
-              console.log("add.html", data);
-              
-            });
+        $("#add-btn").on("click", function (event) {
+            event.preventDefault();
+            let newReservation = {
+                name: $("#name").val().trim(),
+                email: $(".email").val().trim(),
+                guests: $(".guests").val().trim(),
+                //table: $(".table").val().trim()
+            };
+            console.log(newReservation)
+
+            $.post("/api/restaurant", newReservation)
+                .then(function (data) {
+                    console.log("add.html", data);
+
+                });
         });
-      </script>
->>>>>>> dd7f357567baedc2fbf0eb721048472ff8843493
+    </script>
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
 
 

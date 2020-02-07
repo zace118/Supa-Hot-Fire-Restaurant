@@ -10,32 +10,31 @@ app.use(express.json());
 console.log("epic! this works!");
 
 class Reservation {
-    constructor(name, phone, email, id) {
+    constructor(name, email, guests) {
       this.name = name;
-      this.phone = phone;
       this.email = email;
-      this.id = id;
+      this.guests = guests;
       this.table = "";
     }
     getName() {
       console.log(`Hello, my name is ${this.name}`);
       return this.name;
     }
-    getId() {
-      console.log(`  ${this.id}`);
-      return this.id;
-    }
     getEmail() {
       return this.email;
     }
-    getRole() {
-      return this.role;
+    getGuests() {
+      return this.guests;
     }
+    getTable() {
+        console.log(`  ${this.table}`);
+        return this.id;
+      }
   };
   module.exports = Reservation;
 
 app.get("/", function(req, res) {
-    req.sendFile(path.join(__dirname, ""))
+    res.sendFile(path.join(__dirname, "home.html"))
 });
 
 app.listen(PORT, function() {
